@@ -10,8 +10,8 @@ public class Car {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "model")
+    private String model;
 
     @Column(name = "series")
     private int series;
@@ -22,8 +22,8 @@ public class Car {
     public Car() {
     }
 
-    public Car(String name, int series) {
-        this.name = name;
+    public Car(String model, int series) {
+        this.model = model;
         this.series = series;
     }
 
@@ -35,12 +35,12 @@ public class Car {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getModel() {
+        return model;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.model = model;
     }
 
     public int getSeries() {
@@ -62,7 +62,7 @@ public class Car {
     @Override
     public String toString() {
         return "Car{" +
-                "name='" + name + '\'' +
+                "name='" + model + '\'' +
                 ", series=" + series +
                 ", user=" + user.getFirstName() +
                 '}';
